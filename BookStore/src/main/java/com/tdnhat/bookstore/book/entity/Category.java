@@ -1,4 +1,4 @@
-package com.tdnhat.bookstore.book.model;
+package com.tdnhat.bookstore.book.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
