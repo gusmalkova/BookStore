@@ -15,17 +15,14 @@ public class BookWebSecurityConfig {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return web -> web.ignoring()
                 // Spring Security should completely ignore URLs starting with /resources/
-                .antMatchers("/resources/**");
+                .antMatchers("/resources/**", "/version");
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/css/**", "/signup", "/saveuser")
-                .permitAll()
-                .and()
-                .authorizeRequests()
-                .anyRequest().authenticated()
-                .and()
+        http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/**")
+                .hasRole("USER").and()
                 .formLogin().loginPage("/login")
                 .defaultSuccessUrl("/booklist")
                 .permitAll()
