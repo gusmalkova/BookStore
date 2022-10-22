@@ -1,8 +1,8 @@
-package com.tdnhat.bookstore.book.service;
+package com.tdnhat.bookstore.security;
 
-import com.tdnhat.bookstore.book.entity.Role;
-import com.tdnhat.bookstore.book.entity.User;
-import com.tdnhat.bookstore.book.entity.UserRepository;
+import com.tdnhat.bookstore.user.entity.Role;
+import com.tdnhat.bookstore.user.entity.User;
+import com.tdnhat.bookstore.user.entity.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package com.tdnhat.bookstore.book.entity;
+package com.tdnhat.bookstore.user.entity;
 
 public enum Permission {
     READ("read"),

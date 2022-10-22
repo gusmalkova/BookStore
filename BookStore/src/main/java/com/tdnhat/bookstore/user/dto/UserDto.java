@@ -1,5 +1,6 @@
-package com.tdnhat.bookstore.book.dto;
+package com.tdnhat.bookstore.user.dto;
 
+import com.tdnhat.bookstore.user.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +8,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 /**
- * A DTO for the {@link com.tdnhat.bookstore.book.entity.User} entity
+ * A DTO for the {@link User} entity
  */
 @Getter
 @Setter

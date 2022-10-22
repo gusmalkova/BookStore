@@ -1,4 +1,4 @@
-package com.tdnhat.bookstore.book.entity;
+package com.tdnhat.bookstore.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;

@@ -1,6 +1,6 @@
-package com.tdnhat.bookstore.book.boudary;
+package com.tdnhat.bookstore.user.controller;
 
-import com.tdnhat.bookstore.book.entity.UserRepository;
+import com.tdnhat.bookstore.user.entity.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

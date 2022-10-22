@@ -1,7 +1,7 @@
-package com.tdnhat.bookstore.book.dto;
+package com.tdnhat.bookstore.user.dto;
 
-import com.tdnhat.bookstore.book.entity.Permission;
-import com.tdnhat.bookstore.book.entity.Role;
+import com.tdnhat.bookstore.user.entity.Permission;
+import com.tdnhat.bookstore.user.entity.Role;
 import lombok.Getter;
 import lombok.Setter;
 
