@@ -1,10 +1,12 @@
 package com.tdnhat.bookstore.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.tdnhat.bookstore.book.entity.Order;
 import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -34,6 +36,9 @@ public class User {
     @ManyToMany
     @Column(name = "role", nullable = false)
     private Set<Role> role;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Order> orders;
 
     @Override
     public boolean equals(Object o) {
