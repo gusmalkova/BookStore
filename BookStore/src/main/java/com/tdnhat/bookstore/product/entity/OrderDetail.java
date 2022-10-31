@@ -1,4 +1,4 @@
-package com.tdnhat.bookstore.book.entity;
+package com.tdnhat.bookstore.product.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
@@ -22,17 +22,17 @@ public class OrderDetail {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "orderId")
+    @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
     @ManyToOne
-    @JoinColumn(name = "bookId")
-    private Book book;
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 
-    @Column(nullable = false)
+    @Column(name = "price", nullable = false)
     private double price;
 
-    @Column(nullable = false)
+    @Column(name = "quantity", nullable = false)
     private int quantity;
 
     @Override

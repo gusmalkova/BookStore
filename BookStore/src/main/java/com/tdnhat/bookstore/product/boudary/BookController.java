@@ -1,7 +1,7 @@
-package com.tdnhat.bookstore.book.boudary;
+package com.tdnhat.bookstore.product.boudary;
 
-import com.tdnhat.bookstore.book.entity.Book;
-import com.tdnhat.bookstore.book.entity.BookRepository;
+import com.tdnhat.bookstore.product.entity.Book;
+import com.tdnhat.bookstore.product.entity.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.tdnhat.bookstore.book.entity;
+package com.tdnhat.bookstore.product.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
@@ -23,9 +23,9 @@ public class Category {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "description", nullable = true)
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
-    private List<Book> books;
+    private List<Product> products;
 }

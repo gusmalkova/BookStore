@@ -1,7 +1,7 @@
 package com.tdnhat.bookstore.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.tdnhat.bookstore.book.entity.Order;
+import com.tdnhat.bookstore.product.entity.Order;
 import lombok.*;
 import org.hibernate.Hibernate;
 

@@ -1,6 +1,7 @@
-package com.tdnhat.bookstore.book.entity;
+package com.tdnhat.bookstore.product.entity;
 
 import com.tdnhat.bookstore.user.entity.User;
+import com.tdnhat.bookstore.util.BillCodeUtils;
 import lombok.*;
 import org.hibernate.Hibernate;
 
@@ -24,31 +25,33 @@ public class Order {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name = "bill_code", length = 14, nullable = false)
-    private String billCode;
+    @Builder.Default
+    @Column(name = "bill_code", length = 50, nullable = true)
+    private String billCode = BillCodeUtils.generate();
 
-    @Column(name = "full_name", length = 50, nullable = false)
+    @Column(name = "full_name", length = 50, nullable = true)
     private String fullname;
 
-    @Column(name = "email", length = 100, nullable = false)
+    @Column(name = "email", length = 100, nullable = true)
     private String email;
 
-    @Column(name = "phone_number", length = 11, nullable = false)
+    @Column(name = "phone_number", length = 20, nullable = true)
     private String phoneNumber;
 
     @Column(length = 200, nullable = false)
     private String address;
 
-    @Column(name = "note",length = 200)
+    @Column(name = "note", length = 200)
     private String note;
 
     @Builder.Default
     @Column(name = "order_time", nullable = false)
     private LocalDateTime createdTime = LocalDateTime.now();
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
     private OrderStatus status = OrderStatus.PENDING;

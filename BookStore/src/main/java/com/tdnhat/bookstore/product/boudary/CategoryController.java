@@ -1,7 +1,7 @@
-package com.tdnhat.bookstore.book.boudary;
+package com.tdnhat.bookstore.product.boudary;
 
-import com.tdnhat.bookstore.book.entity.Category;
-import com.tdnhat.bookstore.book.entity.CategoryRepository;
+import com.tdnhat.bookstore.product.entity.Category;
+import com.tdnhat.bookstore.product.entity.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +32,7 @@ public class CategoryController {
     public Response findBooksByCategoryId(@PathVariable("id") Long id) {
         Optional<Category> category = categoryRepository.findById(id);
         if (category.isPresent()) {
-            return Response.ok().entity(category.get().getBooks()).build();
+            return Response.ok().entity(category.get().getProducts()).build();
         } else {
             return Response.status(Response.Status.NOT_FOUND).entity("Not found books for category id").build();
         }

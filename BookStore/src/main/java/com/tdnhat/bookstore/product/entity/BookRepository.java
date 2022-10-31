@@ -1,4 +1,4 @@
-package com.tdnhat.bookstore.book.entity;
+package com.tdnhat.bookstore.product.entity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
