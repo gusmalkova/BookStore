@@ -12,6 +12,6 @@ public final class BillCodeUtils {
      * @return bill code
      */
     public static String generate() {
-        return "BILL-" + System.currentTimeMillis() % 3;
+        return "BILL-" + System.currentTimeMillis();
     }
 }

@@ -35,12 +35,6 @@ public class Order {
     @Column(name = "full_name", length = 50, nullable = true)
     private String fullname;
 
-    @Column(name = "email", length = 100, nullable = true)
-    private String email;
-
-    @Column(name = "phone_number", length = 20, nullable = true)
-    private String phoneNumber;
-
     @Column(length = 200, nullable = false)
     private String address;
 
@@ -48,7 +42,7 @@ public class Order {
     private String note;
 
     @Builder.Default
-    @Column(name = "order_time", nullable = false)
+    @Column(name = "created_time", nullable = false)
     private LocalDateTime createdTime = LocalDateTime.now();
 
     @Builder.Default

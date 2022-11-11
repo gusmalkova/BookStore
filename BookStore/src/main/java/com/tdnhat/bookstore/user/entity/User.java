@@ -33,6 +33,12 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "email", nullable = true)
+    private String email;
+
+    @Column(name = "phone", nullable = true)
+    private String phone;
+
     @ManyToMany
     @Column(name = "role", nullable = false)
     private Set<Role> role;
