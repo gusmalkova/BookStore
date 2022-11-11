@@ -21,7 +21,7 @@ public final class ISBNUtils {
      * @return ISBN
      */
     public static String generate() {
-        return String.format("ISBN-%s-%s-%s-%s-%s",
+        return String.format("ISBN|%s-%s-%s-%s-%s",
                              randomNumeric(3),
                              randomNumeric(1),
                              randomNumeric(2),

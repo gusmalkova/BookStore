@@ -12,6 +12,6 @@ class ISBNUtilsTest {
         String isbn = ISBNUtils.generate();
         System.out.println(isbn);
         assertNotNull(isbn);
-        assertTrue(isbn.startsWith("ISBN-"));
+        assertTrue(isbn.startsWith("ISBN|"));
     }
 }
