@@ -21,7 +21,7 @@ public final class ISBNUtils {
      * @return ISBN
      */
     public static String generate() {
-        return String.format("ISBN|%s-%s-%s-%s-%s",
+        return String.format("ISBN-%s-%s-%s-%s-%s",
                              randomNumeric(3),
                              randomNumeric(1),
                              randomNumeric(2),
@@ -44,7 +44,7 @@ public final class ISBNUtils {
         }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
-            sb.append(RANDOM.nextInt());
+            sb.append(RANDOM.nextInt(0, 9));
         }
         return sb.toString();
     }
